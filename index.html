@@ -11,21 +11,23 @@
             width: 100%;
             height: 100%;
             font-family: Arial, sans-serif;
+            background-color: #69091a; /* Cor de fundo correspondente ao convite */
+            overflow-x: hidden;
+            overflow-y: auto; /* Habilita o scroll vertical */
         }
         .container {
             position: relative;
             width: 100%;
             max-width: 100%;
-            height: 100vh;
             background-image: url('convite.jpg'); /* Nome do arquivo de imagem */
-            background-size: cover;
-            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center top;
+            padding-top: 120%; /* Proporção para manter a imagem responsiva */
         }
         .button {
             position: absolute;
             display: inline-block;
-            padding: 10px 20px;
-            font-size: 1em;
             color: transparent; /* Esconde o texto do botão */
             background-color: rgba(0, 0, 0, 0); /* Fundo transparente */
             border-radius: 5px;
@@ -37,52 +39,82 @@
 
         /* Posicionamento dos botões */
         .btn-abre {
-            top: 70%;
+            top: 50%;
             left: 50%;
-            width: 30%;
-            height: 8%;
+            width: 57%;
+            height: 32%;
             transform: translate(-50%, -50%);
         }
 
         .btn-mapa {
-            top: 80%;
-            left: 30%;
-            width: 30%;
-            height: 8%;
+            top: 78%;
+            left: 30.2%;
+            width: 16.5%;
+            height: 12%;
             transform: translate(-50%, -50%);
         }
 
         .btn-presente {
-            top: 80%;
-            left: 70%;
-            width: 30%;
-            height: 8%;
+            top: 78%;
+            left: 50.2%;
+            width: 16.5%;
+            height: 12%;
             transform: translate(-50%, -50%);
         }
 
         .btn-confirmar {
-            top: 90%;
-            left: 50%;
-            width: 30%;
-            height: 8%;
+            top: 78%;
+            left: 70.5%;
+            width: 16.5%;
+            height: 12%;
             transform: translate(-50%, -50%);
         }
 
         @media (max-width: 768px) {
-            .button {
-                width: 60%;
-                height: 10%;
-                font-size: 0.9em;
+            .container {
+                padding-top: 150%;
+            }
+            .btn-abre {
+                top: 50%;
+                left: 50%;
+                width: 70%;
+                height: 32%;
+                transform: translate(-50%, -50%);
+            }
+
+            .btn-mapa {
+                top: 78%;
+                left: 25.5%;
+                width: 19%;
+                height: 12%;
+                transform: translate(-50%, -50%);
+            }
+
+            .btn-presente {
+                top: 78%;
+                left: 50%;
+                width: 19%;
+                height: 12%;
+                transform: translate(-50%, -50%);
+            }
+
+            .btn-confirmar {
+                top: 78%;
+                left: 75.5%;
+                width: 19%;
+                height: 12%;
+                transform: translate(-50%, -50%);
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <a href="https://drive.google.com/file/d/1Vh29aJlcAXYWffSjY2hl6guj8rxcZlmM/view?usp=sharing" class="button btn-abre"></a>
-        <a href="https://maps.app.goo.gl/YNGvj3dTrQmvKvky7" class="button btn-mapa"></a>
-        <a href="https://maps.app.goo.gl/ABpka41FtXvpfuMd8" class="button btn-presente"></a>
-        <a href="https://wa.me/5511947174339" class="button btn-confirmar"></a>
-    </div>
+<div class="container">
+    <a href="https://drive.google.com/file/d/1Vh29aJlcAXYWffSjY2hl6guj8rxcZlmM/view?usp=sharing" class="button btn-abre"></a>
+    <a href="https://maps.app.goo.gl/YNGvj3dTrQmvKvky7" class="button btn-mapa"></a>
+    <a href="https://maps.app.goo.gl/ABpka41FtXvpfuMd8" class="button btn-presente"></a>
+    <a href="https://wa.me/5511947174339?text=Recebi%20o%20vosso%20convite%20e%20confirmo%20minha%20presença%20no%20grande%20baile%20em%20honra%20aos%2015%20anos%20de%20Lady%20Nicole.
+" class="button btn-confirmar"></a>
+</div>
 </body>
 </html>
